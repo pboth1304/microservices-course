@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { useState } from 'react';
+import axios from "axios";
+import { useState } from "react";
 
 const useRequest = ({ url, method, body, onSuccess }) => {
   const [errors, setErrors] = useState(null);
@@ -12,7 +12,6 @@ const useRequest = ({ url, method, body, onSuccess }) => {
       if (onSuccess) {
         onSuccess(response.data);
       }
-
       return response.data;
     } catch (err) {
       setErrors(
